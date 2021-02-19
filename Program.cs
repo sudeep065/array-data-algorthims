@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace array_data_algorthims
@@ -7,7 +8,6 @@ namespace array_data_algorthims
     {
         static void Main(string[] args)
         {
-
             int[] ar = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int result = simpleArraySum(ar);
 
