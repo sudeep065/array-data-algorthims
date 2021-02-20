@@ -46,7 +46,7 @@ namespace array_data_algorthims
             return Math.Abs(diag1Sum - diag2Sum);
         }
 
-        // 
+        // Min Max Sum Given Array
         public static void minMaxSumGivenArray(int[] arr)
         {
             #region
@@ -81,5 +81,23 @@ namespace array_data_algorthims
             Console.ReadLine();
             #endregion
         }
+
+        // Count how many candles are tallest in a given array.
+        public static int birthdayCakeCandles(List<int> candles)
+        {
+            int noOfCandles = 0, max = 0;
+            if (candles.Count > 0)
+            {
+                max = candles.Max();
+                for (int i = 0; i < candles.Count; i++)
+                {
+                    if (max == candles[i])
+                        noOfCandles++;
+                }
+
+            }
+            return noOfCandles;
+        }
+
     }
 }

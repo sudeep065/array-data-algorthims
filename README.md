@@ -39,3 +39,12 @@ Sum everything 2 except , the sum is =13.
 Sum everything 3 except , the sum is =12.
 Sum everything 4 except , the sum is =11.
 Sum everything 5 except , the sum is =10.
+
+##4. Count how many candles are tallest in a given array which are repeated or duplicates.
+
+Sample Input
+3 2 1 3
+Sample Output
+2
+Explanation
+Candle heights are . The tallest candles are  units, and there are  of them.
