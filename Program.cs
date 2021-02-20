@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace array_data_algorthims
 {
@@ -43,6 +44,42 @@ namespace array_data_algorthims
                 col++;
             }
             return Math.Abs(diag1Sum - diag2Sum);
+        }
+
+        // 
+        public static void minMaxSumGivenArray(int[] arr)
+        {
+            #region
+            // input = {1, 2, 3, 4, 5} - Calculate the sum of integers, display Min and Max of sum.
+            // int[] arr = { 1, 2, 3, 4, 5 }; // {7, 69, 2, 221, 7864}
+            List<long> result = new List<long>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                long sum = 0;
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        sum += arr[j];
+                    }
+                }
+                result.Add(sum);
+            }
+            Console.WriteLine("{0} {1}", result.Min(), result.Max());
+            #endregion
+
+            #region
+            // short and best answer for getting min and max sum.
+            Array.Sort(arr);
+            long min = 0, max = 0;
+            for (int i = 0, j = arr.Length - 1; i < arr.Length - 1; i++, j--)
+            {
+                max = max + arr[j];
+                min = min + arr[i];
+            }
+            Console.WriteLine("{0} {1}", min, max);
+            Console.ReadLine();
+            #endregion
         }
     }
 }
