@@ -9,13 +9,21 @@ namespace array_data_algorthims
     {
         static void Main(string[] args)
         {
-            int[] ar = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int result = simpleArraySum(ar);
+            //int[] ar = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int result = simpleArraySum(ar);
 
-            Console.WriteLine("Sum of array = {0}", result);
+            //int[] arr = { 203, 204 ,205 ,206 ,207 ,208 ,203 ,204 ,205 ,206 };
+            //int[] brr = { 203, 204 ,204 ,205 ,206 ,207 ,205 ,208 ,203 ,206 ,205 ,206 ,204 };
+            //int[] result = missingArrayFromInput(arr, brr);
+            //foreach (int a in result)
+            //    Console.WriteLine("/n {0}", a);
+            int[] ar = { 1, -2, 3, 4, 5, -6, -7, 8, 0, 0 };
+            plusMinus(ar);
             Console.ReadLine();            
         }
 
+
+        # region -- Simple Array
         // Simple array Sum Function goes here.
         public static int simpleArraySum(int[] ar)
         {
@@ -30,7 +38,9 @@ namespace array_data_algorthims
             }
             return result;
         }
+        #endregion
 
+        # region -- Sum Of Diagonals
         // Given a square matrix, calculate the absolute difference between the sums of its diagonals.
         public static int diagonalDifference(List<List<int>> arr)
         {
@@ -45,7 +55,9 @@ namespace array_data_algorthims
             }
             return Math.Abs(diag1Sum - diag2Sum);
         }
+        #endregion
 
+        # region -- MinMaxSum
         // Min Max Sum Given Array
         public static void minMaxSumGivenArray(int[] arr)
         {
@@ -81,7 +93,9 @@ namespace array_data_algorthims
             Console.ReadLine();
             #endregion
         }
+        #endregion
 
+        # region -- Tallest Duplicates
         // Count how many candles are tallest in a given array.
         public static int birthdayCakeCandles(List<int> candles)
         {
@@ -97,6 +111,63 @@ namespace array_data_algorthims
 
             }
             return noOfCandles;
+        }
+
+        #region -- Plus Minus
+        // Plus Minus- Zero count and divide by the array.length.
+        static void plusMinus(int[] arr)
+        {
+            int positive = 0, negative = 0, zero = 0;
+            if (arr.Length > 0)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i] == 0)
+                    {
+                        zero++;
+                    }
+                    else if (arr[i] < 0)
+                    {
+                        negative++;
+                    }
+                    else
+                    {
+                        positive++;
+                    }
+                }
+                Console.WriteLine("{0}\n {1}\n {2}\n", (float)positive / arr.Length, (float)negative / arr.Length, (float)zero / arr.Length);
+            }
+        }
+        #endregion
+
+        public static int[] missingArrayFromInput(int[] arr, int[] brr)
+        {
+            // int[] c = arr.Concat(brr).Distinct().ToArray();
+            //int[] same = arr.Intersect(brr).ToArray(); ;
+            //int[] diff = arr.Union(brr).Except(same).ToArray();
+            //int[] c = new int[] { diff[0], same[0], same[1], diff[1] };
+            Array.Sort(arr);
+            Array.Sort(brr);
+            List<int> index = new List<int>();
+                        
+            for (int i = 0, j = 0; i < brr.Length; i++, j++)
+            {
+                int checkNo = 0;
+                if (j == arr.Length)
+                {
+                    j--;
+                    checkNo = brr[i];
+                }
+                else if (arr[j] != brr[i])
+                {
+                    checkNo = brr[i];
+                }
+                bool isDuplicate = index.Exists(x => x == checkNo);
+                if (!isDuplicate)
+                    if(checkNo != 0)
+                        index.Add(checkNo);
+            }
+            return null;
         }
 
     }

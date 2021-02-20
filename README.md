@@ -1,23 +1,14 @@
 ## Table of Contents
-
-* [Demo](#demo)
 * [Quick Start](#quick-start)
-* [Simple Array of Sum](#simpleArray)
-* [Sum of diagonals](#sumOfDiagonals)
+* [Simple Array of Sum](#Simple Array Sum)
+* [Sum of diagonals](#Sum Of Diagonals)
 * [Min Max in Array](#MinMaxSum)
-* [Find Tallest Duplicate](#tallestDuplicates)
-* [Resources](#resources)
+* [Find Tallest Duplicate](#Tallest Duplicates)
+* [PlusMinus- Divide the count](#Plus Minus)
 * [Reporting Issues](#reporting-issues)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
-
-
-
-## Demo
-
-| Dashboard | User Profile | Tables | Icons | Notifications |
-| --- | --- | --- | --- | --- |
 
 ## Terminal Commands
 
@@ -76,3 +67,20 @@ Sample Output
 2
 Explanation
 Candle heights are . The tallest candles are  units, and there are  of them.
+
+## Plus Minus
+Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. 
+Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+Sample Input  
+arr[] size n = 6
+arr = [-4, 3, -9, 0, 4, 1]
+
+Sample Output
+0.500000
+0.333333
+0.166667
+
+Explanation
+There are 3 positive numbers,  negative 2 numbers, and 1 zero in the array.
+The proportions of occurrence are positive:3/6=0.500000 , negative:2/6=0.333333  and zeros: 1/6=0.166667.
