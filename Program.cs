@@ -17,8 +17,9 @@ namespace array_data_algorthims
             //int[] result = missingArrayFromInput(arr, brr);
             //foreach (int a in result)
             //    Console.WriteLine("/n {0}", a);
-            int[] ar = { 1, -2, 3, 4, 5, -6, -7, 8, 0, 0 };
-            plusMinus(ar);
+            //int[] ar = { 1, -2, 3, 4, 5, -6, -7, 8, 0, 0 };
+            //plusMinus(ar);
+            
             Console.ReadLine();            
         }
 
@@ -112,6 +113,7 @@ namespace array_data_algorthims
             }
             return noOfCandles;
         }
+        #endregion
 
         #region -- Plus Minus
         // Plus Minus- Zero count and divide by the array.length.
@@ -170,5 +172,37 @@ namespace array_data_algorthims
             return null;
         }
 
+        #region - Staircase --upward --downward --triangle
+        // Complete the staircase function below.
+        static void staircase(int n)
+        {
+            //Staircase --upward
+            if (n > 0)
+            {
+                for (int i = 1; i <= n; i++)
+                    Console.WriteLine(new String('#', i).PadLeft(n, ' '));
+            }
+            //Staircase --downward
+            if (n > 0)
+            {
+                for (int i = 1; i <= n; i++)
+                    Console.WriteLine(new String('#', i).PadRight(n, ' '));
+            }
+
+            #region -- another way of making triangle.
+            int height = 6;
+            int count = height;
+            for (int row = 0; row < height; row++)
+            {
+                for (int column = 0; column < count; column++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+                count--;
+            }
+            #endregion
+        }
+        #endregion
     }
 }

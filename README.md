@@ -1,11 +1,11 @@
 ## Table of Contents
 * [Quick Start](#quick-start)
-* [Simple Array of Sum](#Simple Array Sum)
-* [Sum of diagonals](#Sum Of Diagonals)
+* [Simple Array of Sum](#Simple ArraySum)
+* [Sum of diagonals](#Sum Diagonals)
 * [Min Max in Array](#MinMaxSum)
 * [Find Tallest Duplicate](#Tallest Duplicates)
 * [PlusMinus- Divide the count](#Plus Minus)
-* [Reporting Issues](#reporting-issues)
+* [Staircase Upward Downward](#Staircase Triangle)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
@@ -14,7 +14,7 @@
 
 This project was generated with Console using [Visual Studio 2019 Free Version click to download](https://visualstudio.microsoft.com/downloads/) version 16.8.4
 
-## simpleArray
+## Simple ArraySum
 Given an array of integers, find the sum of its elements.
 Complete the simpleArraySum function in the editor below. It must return the sum of the array elements as an integer.
 Sample Input
@@ -27,7 +27,7 @@ Sample Output
 Explanation
 1+2+3+4+10+11 = 31
 
-## sumOfDiagonals
+## Sum Diagonals
 Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 Given in a List<List<int>> find the diagonal sum from Left to right and Right to Left.
 Sample Input 
@@ -58,7 +58,7 @@ Sum everything 3 except , the sum is =12.
 Sum everything 4 except , the sum is =11.
 Sum everything 5 except , the sum is =10.
 
-## tallestDuplicates
+## Tallest Duplicates
 Count how many candles are tallest in a given array which are repeated or duplicates.
 
 Sample Input
@@ -84,3 +84,20 @@ Sample Output
 Explanation
 There are 3 positive numbers,  negative 2 numbers, and 1 zero in the array.
 The proportions of occurrence are positive:3/6=0.500000 , negative:2/6=0.333333  and zeros: 1/6=0.166667.
+
+
+## Staircase Triangle
+This is a staircase of size n:6
+Sample Input
+6 
+
+Sample Output
+     #
+    ##
+   ###
+  ####
+ #####
+######
+
+Explanation
+The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
