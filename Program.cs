@@ -204,5 +204,37 @@ namespace array_data_algorthims
             #endregion
         }
         #endregion
+            
+            #region - Smalles positive integer --min --max --binary search
+        // find the smallest missing positive integer in an sorted array.
+        static void findSmallestMissingPositiveNumber(int[] n)
+        {
+            int[] nums = new int[] {1, 2, 3, 4, 5, 6, 7 }; // output : 8
+ 
+            int left = 0, right = nums.Length - 1;
+            int answer = findSmallestMissing(nums, left, right);
+            Console.WriteLine(answer);
+        } 
+        
+        static static int findSmallestMissing(int[] nums, int left, int right)
+	    {
+		// base condition
+        if (left > right) {
+            return left;
+        }
+ 
+        int mid = left + (right - left) / 2;
+ 
+        // if the mid-index matches with its value, then the mismatch
+        // lies on the right half
+        if (nums[mid] == mid) {
+            return findSmallestMissing(nums, mid + 1, right);
+        }
+        else {
+            // mismatch lies on the left half
+            return findSmallestMissing(nums, left, mid - 1);
+        }
+	    }
+     #endregion
     }
 }
