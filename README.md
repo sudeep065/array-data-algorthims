@@ -6,8 +6,7 @@
 * [Find Tallest Duplicate](#Tallest-Duplicates)
 * [PlusMinus- Divide the count](#Plus-Minus)
 * [Staircase Upward Downward](#Staircase-Triangle)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
+* [Find Smallest +ve missing number from an array](#smallest-missing-no)
 * [Useful Links](#useful-links)
 
 ## Terminal Commands
@@ -101,3 +100,14 @@ Sample Output
 
 Explanation
 The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
+     
+## smallest-missing-no
+array of size n
+Sample Input
+[1, 2, 3, 4, 5] 
+
+Sample Output
+     6
+
+Explanation
+The binary search, find the middle index is in the right position, to decide whether missing element in left half or right half.
